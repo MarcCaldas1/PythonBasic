@@ -43,7 +43,10 @@ def binari():
     b = bin(a)
     print("El nombre {} és igual a {}.".format (a, b))
 
-
+def octal():
+    a = int(input("Introdueix el nombre: "))
+    b = oct(a)
+    print("El nombre {} és igual a {}".format (a, b))
 
 
 a = True
@@ -60,6 +63,8 @@ while a:
             dividir()
         case 5:
             binari()
+        case 6:
+            octal()
         case 9:
             a = False
             print("Adéu, gràcies per haver utilitzat la calculadora! \n")
