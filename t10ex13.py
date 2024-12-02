@@ -11,7 +11,7 @@ def menu():
         print("7: Decimal")
         print("8: Hexadecimal")
         print("9: Sortir")
-        op = int(input("Introduéix un opció del menú: "))
+        op = int(input("Introdueix una opció del menú: "))
         return op
 
 def sumar():
@@ -48,6 +48,17 @@ def octal():
     b = oct(a)
     print("El nombre {} és igual a {}".format (a, b))
 
+def decimal():
+    a = input("Introdueix el nombre: ")
+    b = int(input("Introdueix la base del nombre (2 per binari, 8 per octal, 16 per hexadecimal): "))
+    c = int(a, b)
+    print("El nombre {} és igual a {}".format (a,c))
+
+def hexadecimal():
+    a = int(input("Introdueix el nombre: "))
+    b = hex(a)
+    print("El nombre {} és igual a {}".format(a, b))
+
 
 a = True
 while a:
@@ -65,6 +76,10 @@ while a:
             binari()
         case 6:
             octal()
+        case 7:
+            decimal()
+        case 8:
+            hexadecimal()
         case 9:
             a = False
             print("Adéu, gràcies per haver utilitzat la calculadora! \n")
