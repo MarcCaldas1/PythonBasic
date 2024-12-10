@@ -193,7 +193,7 @@ print(r)"""
 
 
 
-
+"""
 #Donada una llista que ens retorni que siguin parells
 l = [3,5,6,8,9,11,12]
 
@@ -235,3 +235,30 @@ def fact(n):
     else:
         return n * fact(n-1)
 print(fact(3))
+"""
+
+#Llegir una cadena de caràcters i substituir les vocals per un punt i mostrar resultats
+"""a = (input("Introdueix una cadena de caràcters: "))
+l = list(a)
+r = []
+for e in l:
+    if e in "aeiou":
+        r.append(".")
+    else:
+        r.append(e)
+s= " ".join(r)
+print(s)
+"""
+
+
+
+a = (input("Introdueix una cadena de caràcters: "))
+l = list(a)
+r = []
+for e in l:
+    if e in "QWERTYUIOPASDFGHJÑZXCVBNM":
+        r.append(".")
+    else:
+        r.append("-")
+s= " ".join(r)
+print(s)
