@@ -1,5 +1,5 @@
 """Definir una funció hi_ha_duplicats() que ens indiqui si una llista donada té qualque element duplicat o no, 
-no s’ha de modificar la llista donada. Prova-la.
+no s'ha de modificar la llista donada. Prova-la.
 """
 
 def llegir_llista():
@@ -8,16 +8,16 @@ def llegir_llista():
     while a!=".":
         a=input("Introdueix elements per la llista: ")
         if a!=".":
-            l.append(a)
+            l.append(int(a))
     return l
 
 def hi_ha_duplicats(l):
-    duplicats= [e for e in set(l) if l.count(e)>1]
-    return duplicats
+    s=set(l)
+    if len(l)==len(s):
+        print("No hi ha duplicats")
+    else:
+        print("Hi ha duplicats")
 
 #Programa principal
-if __name__ == "__main__":
-    llista=llegir_llista()
-    duplicats=hi_ha_duplicats(llista)
-    if duplicats:
-        print("Hi ha elements duplicats: {}".format(', '.join(duplicats)))
+l=llegir_llista()
+hi_ha_duplicats(l)
