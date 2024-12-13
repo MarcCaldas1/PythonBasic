@@ -8,7 +8,7 @@ def llegir_llista():
     while a!=".":
         a=input("Introdueix elements per la llista: ")
         if a!=".":
-            l.append(int(a))
+            l.append(a)
     return l
 
 def hi_ha_duplicats(l):
